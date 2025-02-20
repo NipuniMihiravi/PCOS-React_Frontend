@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Route, Routes, NavLink, Navigate } from 'react-router-dom';  // Correct imports for react-router-dom v6+
+import './component/Home/App.css';
 
-function App() {
+import PcosForm from './component/Home/PcosForm';  // Adjust path if necessary
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* Navbar */}
+      <nav className="navbar">
+        <div className="navbar-container">
+
+
+          <div className="nav-links-container">
+            <ul className="nav-links">
+              <li><NavLink to="/pcos" className={({ isActive }) => (isActive ? 'active' : '')}>Prediction Form</NavLink></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main className="container mt-4">
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/pcos" element={<PcosForm />} />
+        </Routes>
+      </main>
     </div>
   );
-}
+};
 
-export default App;
+const AppWrapper = () => (
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
+
+export default AppWrapper;

@@ -1,0 +1,87 @@
+/* Container for the whole form */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8f0; /* Light green background */
+  border-radius: 8px;
+}
+
+/* Heading style */
+h1 {
+  text-align: center;
+  color: #3b763d; /* Dark green for heading */
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between the columns */
+}
+
+.form-group {
+  flex: 1 1 30%; /* This will make each input group take up 1/3rd of the row */
+  min-width: 250px;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #2e6a2a; /* Dark green for label */
+  font-weight: bold;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #3b763d;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: #eaf7e2; /* Light green for input background */
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #4CAF50; /* Focus border color */
+}
+
+/* Submit button styling */
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3b763d; /* Green background for button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #2e6a2a; /* Darker green when hovering */
+}
+
+/* Result box styling */
+.result {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Error message styling */
+.error {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f44336; /* Red background for errors */
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
